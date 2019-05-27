@@ -29,8 +29,9 @@ function validateIpAddress() {
     return true;
 }
 
+//Showing submit button
 $(document).ready(function(){
-$( ".formInput" ).keyup(function() {    //toShowSubmitButton
+$( ".formInput" ).keyup(function() {
     let inputName = document.getElementById('nickname').value;
 
     if(validateEmail() && validateIpAddress() && inputName.length !== 0){
@@ -46,8 +47,10 @@ function producePrompt(message, promptLocation, color) {
     document.getElementById(promptLocation).style.color = color;
 }
 
-//adding users
+//Adding users
 let users = getSavedUsers()
+
+renderUsers(users)
 
 document.querySelector('#new-user').addEventListener('submit', function (e) {
     event.preventDefault();

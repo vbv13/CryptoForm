@@ -13,6 +13,7 @@
     <script src="adding-users-functions.js"></script>    
     <script src="main.js"></script>
     <main>
+
         <form id="new-user">
             <!-- <label for="Nickname">Nickname</label> -->
             <input id="nickname" class="formInput" type="text" name="nickname" placeholder="Nickname">
@@ -24,11 +25,20 @@
             <span id="ipAddressPrompt"></span>
             <button id="button" type="submit" value="Submit">Add user</button>
         </form>
+
         <div id="users"></div>
-        <div class="modal">
+
+        <div class="modalSingleUser">
                 <button id="confirmRemoval">Delete</button>
-                <button id="close">Close</button>
+                <button id="closeSingleUser">Close</button>
         </div>
+
+        <button id="removeAll">Drop Users</button>
+        <div class="modalAllUsers">
+            <button id="confirmRemovalAll">Delete All</button>
+            <button id="closeAllUsers">Close</button>
+    </div>
+    
     </main>
 </body>
 </html>
