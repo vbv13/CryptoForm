@@ -46,9 +46,18 @@ function producePrompt(message, promptLocation, color) {
     document.getElementById(promptLocation).style.color = color;
 }
 
-form.addEventListener('submit', function(e) {
+//adding users
+let users = getSavedUsers()
+
+document.querySelector('#new-user').addEventListener('submit', function (e) {
     event.preventDefault();
-    
+    users.push({
+        id: uuidv4(),
+        text: e.target.elements.text.value
+    })
+    saveUsers(users)
+    renderUsers(users)
+    //e.target.elements.text.value = ''
 })
 
 
