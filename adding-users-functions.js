@@ -63,15 +63,15 @@ const sortUsers = function (users, sortBy) {
 
 //Render application users
 const renderUsers = function (users) {
-      sortUsers(users, filters.sortBy)
+    sortUsers(users, filters.sortBy)
 
-    //document.querySelector('#users').innerHTML = ''
+    document.querySelector('#users').innerHTML = ''
 
     users.forEach(function(user) {
         document.querySelector('#users').appendChild(generateUserDOM(user))
     })
 
-    removeAllUsers()
+    //removeAllUsers()
 }
 
 //Generate the DOM structure for a user
@@ -104,9 +104,12 @@ const generateUserDOM = function (user) {
         saveUsers(users)
         renderUsers(users)
     })
+
+    return userEl
 }
 
     //Setup remove button for all currently existing users
+    /*
     const removeAllUsers  = function() {
     
     $(document).ready(function(){
@@ -129,6 +132,7 @@ const generateUserDOM = function (user) {
        // renderUsers(users)
     })
 }
+*/
 
 
 

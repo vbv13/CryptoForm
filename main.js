@@ -48,7 +48,7 @@ function producePrompt(message, promptLocation, color) {
 }
 
 //Adding users
-let users = getSavedUsers()
+var users = getSavedUsers()
 
 const filters = {
     sortBy: 'byNickname'
@@ -56,23 +56,27 @@ const filters = {
 
 renderUsers(users)
 
-let formSubmit;
-if(formSubmit) {
- formSubmit = document.querySelector('#new-user').addEventListener('submit', function (e) {
+//let formSubmit;
+//if(formSubmit) {
+ /*formSubmit = */document.querySelector('#new-user').addEventListener('submit', function (e) {
     event.preventDefault();
     users.push({
         id: uuidv4(),
         //text: e.target.elements.text.value,
-        nickname: e.target.elements.text.value,
-        email: e.target.elements.text.value,
-        ipaddress: e.target.elements.text.value,
+        nickname: e.target.elements.nickname.value,
+        email: e.target.elements.email.value,
+        ipaddress: e.target.elements.ipaddress.value,
         createdAt: moment().valueOf()
     })
     saveUsers(users)
     renderUsers(users)
+
+    e.target.elements.nickname.value = ''
+    e.target.elements.email.value = ''
+    e.target.elements.ipaddress.value = ''
     //e.target.elements.text.value = ''
 })
-}
+//}
 
 document.querySelector('#filter-by').addEventListener('change', function (e) {
     filters.sortBy = e.target.value
