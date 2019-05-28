@@ -48,7 +48,7 @@ function producePrompt(message, promptLocation, color) {
 }
 
 //Adding users
-var users = getSavedUsers()
+let users = getSavedUsers()
 
 const filters = {
     sortBy: 'byNickname'
@@ -58,6 +58,26 @@ renderUsers(users)
 
 document.querySelector('#new-user').addEventListener('submit', function (e) {
     event.preventDefault();
+    
+    $(users).each(function(){
+        if(this.nickname == $('#nickname').val()  ){
+            alert('User with such nickname already exists');
+            $('#nickname').val() = ''
+        }
+        else if(this.email == $('#email').val()){
+            alert('User with such email already exists');
+            $('#email').val() = ''
+        }
+});
+
+   /*
+    users.forEach(user => {
+        if(users.nickname == user.nickname) {
+            alert('The name already exist')
+        }
+    });
+    */
+   
     users.push({
         id: uuidv4(),
         //text: e.target.elements.text.value,
@@ -66,6 +86,7 @@ document.querySelector('#new-user').addEventListener('submit', function (e) {
         ipaddress: e.target.elements.ipaddress.value,
         createdAt: moment().valueOf()
     })
+    
     saveUsers(users)
     renderUsers(users)
 
@@ -79,5 +100,3 @@ document.querySelector('#filter-by').addEventListener('change', function (e) {
     filters.sortBy = e.target.value
     renderUsers(users)
 })
-
-
