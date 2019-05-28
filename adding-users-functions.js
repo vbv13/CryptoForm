@@ -71,7 +71,7 @@ const renderUsers = function (users) {
         document.querySelector('#users').appendChild(generateUserDOM(user))
     })
 
-    //removeAllUsers()
+    removeAllUsers()
 }
 
 //Generate the DOM structure for a user
@@ -109,7 +109,6 @@ const generateUserDOM = function (user) {
 }
 
     //Setup remove button for all currently existing users
-    /*
     const removeAllUsers  = function() {
     
     $(document).ready(function(){
@@ -127,12 +126,12 @@ const generateUserDOM = function (user) {
         document.querySelector('.modalAllUsers').style.display = 'none';
     })
     document.getElementById('confirmRemovalAll').addEventListener('click', function() {
-        return users = [];
-        //saveUsers(users)
-       // renderUsers(users)
+        users = [];
+        saveUsers(users)
+        renderUsers(users)
     })
 }
-*/
+
 
 
 

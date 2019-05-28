@@ -56,9 +56,7 @@ const filters = {
 
 renderUsers(users)
 
-//let formSubmit;
-//if(formSubmit) {
- /*formSubmit = */document.querySelector('#new-user').addEventListener('submit', function (e) {
+document.querySelector('#new-user').addEventListener('submit', function (e) {
     event.preventDefault();
     users.push({
         id: uuidv4(),
@@ -76,7 +74,6 @@ renderUsers(users)
     e.target.elements.ipaddress.value = ''
     //e.target.elements.text.value = ''
 })
-//}
 
 document.querySelector('#filter-by').addEventListener('change', function (e) {
     filters.sortBy = e.target.value
