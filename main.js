@@ -50,6 +50,10 @@ function producePrompt(message, promptLocation, color) {
 //Adding users
 let users = getSavedUsers()
 
+const filters = {
+    sortBy: 'byNickname'
+}
+
 renderUsers(users)
 
 let formSubmit;
@@ -69,5 +73,10 @@ if(formSubmit) {
     //e.target.elements.text.value = ''
 })
 }
+
+document.querySelector('#filter-by').addEventListener('change', function (e) {
+    filters.sortBy = e.target.value
+    renderUsers(users)
+})
 
 

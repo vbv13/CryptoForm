@@ -24,8 +24,47 @@ const removeUser = function (id) {
     }
 }
 
+//Sort users
+const sortUsers = function (users, sortBy) {
+    if(sortBy === 'byNickname') {
+        return users.sort(function (a, b) {
+            if(a.nickname > b.nickname) {
+                return -1
+            } else if (a.nickname < b.nickname) {
+                return 1
+            } else {
+                return 0
+            }
+        })
+    } else if (sortBy === 'byEmail') {
+        return users.sort(function (a, b) {
+            if(a.email > b.email) {
+                return -1
+            } else if (a.email < b.email) {
+                return 1
+            } else {
+                return 0
+            }
+        })
+    } else if (sortBy === 'byDate') {
+        return users.sort(function (a, b) {
+            if(a.createdAt > b.createdAt) {
+                return -1
+            } else if (a.createdAt < b.createdAt) {
+                return 1
+            } else {
+                return 0
+            }
+        })
+    } else {
+        return users
+    }
+}
+
 //Render application users
 const renderUsers = function (users) {
+      sortUsers(users, filters.sortBy)
+
     //document.querySelector('#users').innerHTML = ''
 
     users.forEach(function(user) {
@@ -90,3 +129,6 @@ const generateUserDOM = function (user) {
        // renderUsers(users)
     })
 }
+
+
+
