@@ -52,15 +52,22 @@ let users = getSavedUsers()
 
 renderUsers(users)
 
-document.querySelector('#new-user').addEventListener('submit', function (e) {
+let formSubmit;
+if(formSubmit) {
+ formSubmit = document.querySelector('#new-user').addEventListener('submit', function (e) {
     event.preventDefault();
     users.push({
         id: uuidv4(),
-        text: e.target.elements.text.value
+        //text: e.target.elements.text.value,
+        nickname: e.target.elements.text.value,
+        email: e.target.elements.text.value,
+        ipaddress: e.target.elements.text.value,
+        createdAt: moment().valueOf()
     })
     saveUsers(users)
     renderUsers(users)
     //e.target.elements.text.value = ''
 })
+}
 
 

@@ -26,7 +26,7 @@ const removeUser = function (id) {
 
 //Render application users
 const renderUsers = function (users) {
-    document.querySelector('#users').innerHTML = ''
+    //document.querySelector('#users').innerHTML = ''
 
     users.forEach(function(user) {
         document.querySelector('#users').appendChild(generateUserDOM(user))
@@ -38,12 +38,18 @@ const renderUsers = function (users) {
 //Generate the DOM structure for a user
 const generateUserDOM = function (user) {
     const userEl = document.createElement('div')
-    const textEl = document.createElement('span')
+    const nicknameEl = document.createElement('span')
+    const emailEl = document.createElement('span')
+    const ipaddressEl = document.createElement('span')
     const removeButton = document.createElement('button')
 
-    //Setup the user text
-    textEl.textContent = user.text
-    userEl.appendChild(textEl)
+    //Setup the user nickname, email, ipaddress
+    nicknameEl.textContent = user.nickname
+    userEl.appendChild(nicknameEl)
+    emailEl.textContent = user.email
+    userEl.appendChild(emailEl)   
+    ipaddressEl.textContent = user.ipaddress
+    userEl.appendChild(ipaddressEl)
 
     //Setup the remove button for corresponding item
     removeButton.textContent = 'X'
@@ -63,11 +69,12 @@ const generateUserDOM = function (user) {
 
     //Setup remove button for all currently existing users
     const removeAllUsers  = function() {
+    
     $(document).ready(function(){
-    if(users != null) {
-        $('#removeAll').show()
-    } else {
+    if(users == 0) {
         $('#removeAll').hide()
+    } else {
+        $('#removeAll').show()
     }
     });
 
@@ -79,7 +86,7 @@ const generateUserDOM = function (user) {
     })
     document.getElementById('confirmRemovalAll').addEventListener('click', function() {
         return users = [];
-        saveUsers(users)
-        renderUsers(users)
+        //saveUsers(users)
+       // renderUsers(users)
     })
 }

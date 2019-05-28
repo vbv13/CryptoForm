@@ -10,6 +10,7 @@
 </head>
 <body>
     <script src="uuidv4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment-with-locales.min.js"></script>
     <script src="adding-users-functions.js"></script>    
     <script src="main.js"></script>
     <main>
@@ -21,10 +22,14 @@
             <input id="email" onfocusout="validateEmail()" class="formInput" type="text" name="email" placeholder="Email">
             <span id="emailPrompt"></span>
             <br>
-            <input id="ipAddress" onfocusout="validateIpAddress()" class="formInput" type="text" name="IPAddress" placeholder="IP address">
+            <input id="ipAddress" onfocusout="validateIpAddress()" class="formInput" type="text" name="ipaddress" placeholder="IP address">
             <span id="ipAddressPrompt"></span>
             <button id="button" type="submit" value="Submit">Add user</button>
         </form>
+
+        <select id="filter-by">
+
+        </select>
 
         <div id="users"></div>
 
@@ -37,7 +42,7 @@
         <div class="modalAllUsers">
             <button id="confirmRemovalAll">Delete All</button>
             <button id="closeAllUsers">Close</button>
-    </div>
+        </div>
     
     </main>
 </body>
