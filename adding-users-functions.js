@@ -94,8 +94,12 @@ const generateUserDOM = function (user) {
     removeButton.textContent = 'X'
     userEl.appendChild(removeButton)
     removeButton.addEventListener('click', function() {
-        document.querySelector('.modalSingleUser').style.display = 'flex';
+        //document.querySelector('.modalSingleUser').style.display = 'flex';
+        removeUser(user.id)
+        saveUsers(users)
+        renderUsers(users)
     })
+    /*
     document.getElementById('closeSingleUser').addEventListener('click', function() {
         document.querySelector('.modalSingleUser').style.display = 'none';
     })
@@ -104,7 +108,7 @@ const generateUserDOM = function (user) {
         saveUsers(users)
         renderUsers(users)
     })
-
+    */
     return userEl
 }
 

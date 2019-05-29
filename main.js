@@ -69,18 +69,9 @@ document.querySelector('#new-user').addEventListener('submit', function (e) {
             $('#email').val() = ''
         }
 });
-
-   /*
-    users.forEach(user => {
-        if(users.nickname == user.nickname) {
-            alert('The name already exist')
-        }
-    });
-    */
    
     users.push({
         id: uuidv4(),
-        //text: e.target.elements.text.value,
         nickname: e.target.elements.nickname.value,
         email: e.target.elements.email.value,
         ipaddress: e.target.elements.ipaddress.value,
@@ -93,7 +84,6 @@ document.querySelector('#new-user').addEventListener('submit', function (e) {
     e.target.elements.nickname.value = ''
     e.target.elements.email.value = ''
     e.target.elements.ipaddress.value = ''
-    //e.target.elements.text.value = ''
 })
 
 document.querySelector('#filter-by').addEventListener('change', function (e) {
