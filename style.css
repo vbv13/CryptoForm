@@ -4,7 +4,8 @@
 
 body{
     width: 1360px;
-    height: 900px;
+    height: 750px;
+    overflow-x: hidden;
 }
 
 #title{
@@ -25,7 +26,8 @@ body{
     justify-content: center;
     align-items: center;
     left: 50%;
-    transform: translate(-50%, -34%)
+    transform: translate(-50%, -34%);
+    z-index: 1;
 }
 
 #removeAll{
@@ -92,4 +94,6 @@ main{
     cursor: pointer; 
 }
 
-
+#confirmation{
+color: whitesmoke;
+}

@@ -94,15 +94,19 @@ const generateUserDOM = function (user) {
     removeButton.textContent = 'X'
     userEl.appendChild(removeButton)
     removeButton.addEventListener('click', function() {
-        //document.querySelector('.modalSingleUser').style.display = 'flex';
-        removeUser(user.id)
-        saveUsers(users)
-        renderUsers(users)
+        document.querySelector('.modalSingleUser').style.display = 'flex';
+        $('#confirmRemoval').on('click' , function(){
+              removeUser(user.id)
+              saveUsers(users)
+             renderUsers(users)
+             document.querySelector('.modalSingleUser').style.display = 'none';
+        })
     })
-    /*
+    
     document.getElementById('closeSingleUser').addEventListener('click', function() {
         document.querySelector('.modalSingleUser').style.display = 'none';
     })
+    /*
     document.getElementById('confirmRemoval').addEventListener('click', function() {
         removeUser(user.id)
         saveUsers(users)
