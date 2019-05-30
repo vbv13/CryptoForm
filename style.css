@@ -7,6 +7,10 @@ body{
     height: 900px;
 }
 
+#title{
+    font: 35px Arial, Helvetica, sans-serif;
+}
+
 #button{
     display: none;
 }
@@ -28,8 +32,19 @@ body{
     display: none;
 }
 
-input{
+.formInput{
     padding: 9px;
+    outline: none;
+	display: inline-block;
+	width: 40%;
+	padding: 7px;
+	border: none;
+	border-bottom: 1px solid #ddd;
+	background: transparent;
+	margin-bottom: 10px;
+	font: 16px Arial, Helvetica, sans-serif;
+	height: 25px;
+
 }
 
 td{
