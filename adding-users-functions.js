@@ -76,10 +76,10 @@ const renderUsers = function (users) {
 
 //Generate the DOM structure for a user
 const generateUserDOM = function (user) {
-    const userEl = document.createElement('div')
-    const nicknameEl = document.createElement('span')
-    const emailEl = document.createElement('span')
-    const ipaddressEl = document.createElement('span')
+    const userEl = document.createElement('tr')
+    const nicknameEl = document.createElement('td')
+    const emailEl = document.createElement('td')
+    const ipaddressEl = document.createElement('td')
     const removeButton = document.createElement('button')
 
     //Setup the user nickname, email, ipaddress

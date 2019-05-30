@@ -2,29 +2,38 @@
     box-sizing: border-box;
 }
 
+body{
+    width: 1360px;
+    height: 900px;
+}
+
 #button{
     display: none;
 }
 
 .modalSingleUser, .modalAllUsers{
     background-color: rgba(0, 0, 0, 0.5);
-    width: 250%;
-    height: 250%;
+    width: 400%;
+    height: 300%;
     position: absolute;
     top: 0;
     display: none;
     justify-content: center;
     align-items: center;
     left: 50%;
-    transform: translate(-50%, -30%)
+    transform: translate(-50%, -34%)
 }
 
 #removeAll{
     display: none;
 }
 
-span{
-    margin: 40px;
+input{
+    padding: 9px;
+}
+
+td{
+    padding: 18px;
 }
 
 button{
