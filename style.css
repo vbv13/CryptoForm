@@ -4,7 +4,7 @@
 
 body{
     width: 1360px;
-    height: 750px;
+    height: 700px;
     overflow-x: hidden;
 }
 
@@ -34,11 +34,16 @@ body{
     display: none;
 }
 
+form#new-user{
+    width: 600px;
+    height: 120px;
+}
+
 .formInput{
     padding: 9px;
     outline: none;
 	display: inline-block;
-	width: 40%;
+	width: 60%;
 	padding: 7px;
 	border: none;
 	border-bottom: 1px solid #ddd;
@@ -92,8 +97,9 @@ main{
     font-weight: 900;
     border: none;
     cursor: pointer; 
+    top: 15px;
 }
 
 #confirmation{
-color: whitesmoke;
+color: #fee2e1;
 }
