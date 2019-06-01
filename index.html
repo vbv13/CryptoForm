@@ -9,8 +9,8 @@
 <body>
 
     <main>
-        <h2 id="title">Crypto users</h2>
-        <form id="new-user">
+        <h2 class="title">Crypto users</h2>
+        <form id="new-user" class="new-user">
             <input id="nickname" class="formInput" type="text" name="nickname" placeholder="Nickname">
             <br>
             <input id="email" onfocusout="validateEmail()" class="formInput" type="text" name="email" placeholder="Email">
@@ -18,10 +18,10 @@
             <br>
             <input id="ipAddress" onfocusout="validateIpAddress()" class="formInput" type="text" name="ipaddress" placeholder="IP address">
             <span id="ipAddressPrompt"></span>
-            <button id="button" type="submit" value="Submit">Add user</button>
+            <button id="button" class="button" type="submit" value="Submit">Add user</button>
         </form>
 
-        <select id="filter-by">
+        <select id="filter-by" class="filter-by">
             <option value="byNickname">Sort by nickname</option>
             <option value="byEmail">Sort by email</option>
             <option value="byDate">Sort by recently created</option>
@@ -30,12 +30,12 @@
         <div id="users"></div>
 
         <div class="modalSingleUser">
-                <h1 id="confirmation">Do you want to remove user?</h1>
+                <h1 class="confirmation">Do you want to remove user?</h1>
                 <button id="confirmRemoval">Yes</button>
                 <button id="closeSingleUser">No</button>
         </div>
 
-        <button id="removeAll">Drop Users</button>
+        <button id="removeAll" class="removeAll">Drop Users</button>
         <div class="modalAllUsers">
             <button id="confirmRemovalAll">Delete All</button>
             <button id="closeAllUsers">Close</button>

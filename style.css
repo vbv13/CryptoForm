@@ -8,11 +8,11 @@ body{
     overflow-x: hidden;
 }
 
-#title{
+.title{
     font: 35px Arial, Helvetica, sans-serif;
 }
 
-#button{
+.button{
     display: none;
 }
 
@@ -30,11 +30,11 @@ body{
     z-index: 1;
 }
 
-#removeAll{
+.removeAll{
     display: none;
 }
 
-form#new-user{
+form.new-user{
     width: 600px;
     height: 120px;
 }
@@ -82,7 +82,7 @@ main{
     transform: translate(-50%, -50%)
 }
 
-#filter-by{
+.filter-by{
     margin: 5px;
     text-transform: uppercase;
     text-decoration: none;
@@ -100,6 +100,6 @@ main{
     top: 15px;
 }
 
-#confirmation{
+.confirmation{
 color: #fee2e1;
 }
